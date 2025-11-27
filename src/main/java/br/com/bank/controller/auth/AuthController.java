@@ -36,6 +36,7 @@ public class AuthController {
 
         if (!isAuthenticated) {
             AlertUtil.showAlert(Alert.AlertType.ERROR, "Usuario e senha invalido", "Usuario e senha invalido");
+            return;
         }
 
         Stage stageClose = (Stage) ((Node) event.getSource()).getScene().getWindow();

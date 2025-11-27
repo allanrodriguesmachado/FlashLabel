@@ -1,6 +1,7 @@
 package br.com.bank.util;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import br.com.bank.Main;
 import javafx.fxml.FXMLLoader;
@@ -21,7 +22,7 @@ public class ViewLoader {
         Scene scene = new Scene(root);
 
         scene.getStylesheets().add(
-                Main.class.getResource(cssPath).toExternalForm());
+                Objects.requireNonNull(Main.class.getResource(cssPath)).toExternalForm());
 
         newStage.setTitle(title);
         newStage.setResizable(true);
