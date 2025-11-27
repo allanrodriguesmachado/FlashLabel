@@ -13,7 +13,7 @@ public class ViewLoader {
         throw new UnsupportedOperationException("Classe utilitária de navegação.");
     }
 
-    public static void loadNewWindow(String fxmlPath, String cssPath, String title) throws IOException {
+    public static void loadNewWindow(String fxmlPath, String cssPath, String title, Stage windowClose) throws IOException {
         Stage newStage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxmlPath));
 
@@ -26,6 +26,11 @@ public class ViewLoader {
         newStage.setTitle(title);
         newStage.setResizable(true);
         newStage.setScene(scene);
+
+        if (windowClose != null) {
+            windowClose.close();
+        }
+
         newStage.show();
     }
 }

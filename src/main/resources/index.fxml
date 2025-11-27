@@ -10,7 +10,7 @@
 <VBox alignment="CENTER" prefHeight="280.0" prefWidth="320.0" spacing="20.0" 
       xmlns="http://javafx.com/javafx/21" 
       xmlns:fx="http://javafx.com/fxml/1" 
-      fx:controller="br.com.bank.controller.BasicController">
+      fx:controller="br.com.bank.controller.auth.AuthController">
     
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -31,7 +31,7 @@
                 <Font name="Calibri Bold" size="16.0" />
             </font>
         </Label>
-        <TextField fx:id="txtCpf" promptText="Digite o seu CPF" />
+        <TextField fx:id="document"  promptText="Digite o seu CPF" />
     </VBox>
 
      <VBox alignment="CENTER_LEFT" spacing="5.0">
@@ -40,12 +40,12 @@
                 <Font name="Calibri Bold" size="16.0" />
             </font>
         </Label>
-        <TextField fx:id="txtPassword" promptText="Digite a sua senha" />
+        <TextField fx:id="password" promptText="Digite a sua senha" />
     </VBox>
     
     <Label fx:id="messageLabel" minHeight="16" prefHeight="16.0" prefWidth="280.0" />
 
-    <Button fx:id="button" onAction="#handleButtonAction" text="Acessar Conta">
+    <Button fx:id="button" onAction="#loginAction" text="Acessar Conta">
         <font>
             <Font name="Calibri Bold" size="18.0" />
         </font>

@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        ViewLoader.loadNewWindow("/index.fxml", "/style.css", "Bank App - Menu Principal");
+        ViewLoader.loadNewWindow("/index.fxml", "/style.css", "Bank App - Menu Principal", null);
     }
 
     public static void main(String[] args) {
