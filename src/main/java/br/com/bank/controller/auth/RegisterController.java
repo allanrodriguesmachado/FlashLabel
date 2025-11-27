@@ -1,13 +1,11 @@
 package br.com.bank.controller.auth;
 
-import br.com.bank.model.entity.User;
 import br.com.bank.service.UserService;
 import br.com.bank.util.AlertUtil;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
-import java.sql.SQLException;
 
 public class RegisterController {
     @FXML
