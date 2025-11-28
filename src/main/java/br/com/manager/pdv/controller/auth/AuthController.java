@@ -1,8 +1,9 @@
 package br.com.manager.pdv.controller.auth;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
-import br.com.manager.pdv.model.AuthModel;
+import br.com.manager.pdv.service.AuthService;
 import br.com.manager.pdv.util.*;
 import br.com.manager.pdv.util.AlertUtil;
 import br.com.manager.pdv.util.ViewLoader;
@@ -23,21 +24,23 @@ public class AuthController {
     }
 
     @FXML
-    public void loginAction(ActionEvent event) throws IOException {
+    public void loginAction(ActionEvent event) throws  IOException {
         String doc = document.getText();
         String pass = password.getText();
 
-        AuthModel auth = new AuthModel();
+        AuthService auth = new AuthService();
 
         if (doc.isBlank() || pass.isBlank()) {
              AlertUtil.showAlert(Alert.AlertType.WARNING, "Usuario e senha invalido", "Preencha todos os campos");
              return;
         }
 
-        boolean isAuthenticated = auth.authentication(document.getText(), password.getText());
+        boolean isAuthenticated = auth.authenticate(document.getText(), password.getText());
 
         if (!isAuthenticated) {
             AlertUtil.showAlert(Alert.AlertType.ERROR, "Usuario e senha invalido", "Usuario e senha invalido");
+            password.clear();
+            password.requestFocus();
             return;
         }
 
