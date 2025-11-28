@@ -12,7 +12,7 @@ public class AuthService {
         this.userDao = new UserDao();
     }
 
-    public boolean authenticate(String document, String password) {
+    public boolean authenticate(String document, String password)  {
         try {
             Auth newAuth = new Auth(document, password);
             return userDao.authenticated(newAuth);

@@ -2,9 +2,14 @@ package br.com.manager.pdv.controller.auth;
 
 import br.com.manager.pdv.service.UserService;
 import br.com.manager.pdv.util.AlertUtil;
+import br.com.manager.pdv.util.ViewLoader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 
 public class RegisterController {
@@ -13,6 +18,27 @@ public class RegisterController {
 
     @FXML
     private TextField last_name;
+
+
+    @FXML private Button btnNovoProduto;
+
+    @FXML
+    public void abrirModalCadastro() {
+        try {
+            Stage dashboardStage = (Stage) this.btnNovoProduto.getScene().getWindow();
+
+            ViewLoader.loadNewWindowModal(
+                    "/modal_produto.fxml",
+                    "/sistema.css",
+                    "Novo Produto",
+                    dashboardStage
+            );
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private final UserService userService;
 

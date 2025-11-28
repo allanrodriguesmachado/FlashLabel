@@ -4,7 +4,10 @@ import br.com.manager.pdv.model.entity.Auth;
 import br.com.manager.pdv.model.entity.User;
 import br.com.manager.pdv.util.DatabaseFactory;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
+import java.util.Arrays;
 
 public class UserDao {
     public void create(User user) throws SQLException {
@@ -18,13 +21,11 @@ public class UserDao {
         }
     }
 
-    public boolean authenticated(Auth auth) throws SQLException {
-        System.out.println(auth.username());
-        System.out.println(auth.password());
-        try (var conn = DatabaseFactory.getConnection()) {
-            PreparedStatement stmt = conn.prepareStatement(
-                    "SELECT * FROM users WHERE username = ? AND password = ? AND active = true"
-            );
+    public boolean authenticated(Auth auth) throws SQLException{
+        String SQL = "SELECT * FROM users WHERE username = ? AND password = ? AND active = true";
+
+        try (Connection conn = DatabaseFactory.getConnection()) {
+            PreparedStatement stmt = conn.prepareStatement(SQL);
 
             stmt.setString(1, auth.username());
             stmt.setString(2, auth.password());

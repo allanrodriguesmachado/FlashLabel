@@ -1,0 +1,220 @@
+/* TEMA VISUAL PREMIUM
+   Cores: Azul Profundo (#1A1A2E), Roxo Neon (#6C63FF), Branco Suave
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.root {
+    -fx-font-family: 'Poppins', 'Segoe UI', sans-serif;
+    -fx-background-color: #F4F6F9; /* Cinza gelo muito suave */
+}
+
+/* --- SIDEBAR (MENU LATERAL) --- */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #16213E, #1A1A2E);
+}
+
+.sidebar-header {
+    -fx-padding: 0 0 10 0;
+}
+
+.sidebar-section-lbl {
+    -fx-text-fill: #536da8;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 5 20;
+    -fx-opacity: 0.8;
+}
+
+/* Botões do Menu */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #aebfd6;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-pref-height: 50;
+    -fx-padding: 0 0 0 25;
+    -fx-background-radius: 0 30 30 0; /* Arredondado só na direita */
+    -fx-margin: 0 10 0 0;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.nav-icon {
+    -fx-fill: #aebfd6;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-text-fill: white;
+}
+.nav-button:hover .nav-icon { -fx-fill: white; }
+
+/* Item Ativo (Destaque visual forte) */
+.nav-button.active {
+    -fx-background-color: linear-gradient(to right, #6C63FF20, #6C63FF40);
+    -fx-text-fill: white;
+    -fx-border-color: #6C63FF;
+    -fx-border-width: 0 0 0 4;
+}
+.nav-button.active .nav-icon {
+    -fx-fill: #6C63FF; /* Ícone roxo neon */
+    -fx-effect: dropshadow(gaussian, #6C63FF, 10, 0.4, 0, 0); /* Brilho neon */
+}
+
+/* Footer do Sidebar */
+.sidebar-user {
+    -fx-background-color: #0f182d;
+    -fx-border-color: #ffffff10;
+    -fx-border-width: 1 0 0 0;
+}
+.logout-icon { -fx-cursor: hand; -fx-fill: #ffffff80; }
+.logout-icon:hover { -fx-fill: #ff6b6b; }
+
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.greeting-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A1A2E;
+}
+.date-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7F8C8D;
+}
+
+/* Botão de Ação Principal (Substitui o verde antigo) */
+.btn-primary-action {
+    -fx-background-color: #6C63FF; /* Roxo vibrante */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 25;
+    -fx-background-radius: 30;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(108, 99, 255, 0.4), 15, 0, 0, 5);
+}
+.btn-primary-action:hover {
+    -fx-background-color: #5a52d5;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* Botões Secundários */
+.btn-secondary {
+    -fx-background-color: white;
+    -fx-text-fill: #2d3436;
+    -fx-border-color: #dcdde1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+.btn-secondary:hover { -fx-background-color: #f5f6fa; }
+
+.btn-danger {
+    -fx-background-color: #ffeaa7;
+    -fx-text-fill: #d63031;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+.btn-danger:hover { -fx-background-color: #ff7675; -fx-text-fill: white; }
+
+
+/* --- CARDS ESTATÍSTICA --- */
+.stat-card {
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 15, 0, 0, 8);
+}
+.gradient-purple { -fx-background-color: linear-gradient(to bottom right, #6C63FF, #4834d4); }
+.gradient-blue   { -fx-background-color: linear-gradient(to bottom right, #00cec9, #0984e3); }
+.gradient-orange { -fx-background-color: linear-gradient(to bottom right, #fab1a0, #e17055); }
+
+.stat-title { -fx-text-fill: rgba(255,255,255,0.7); -fx-font-size: 12px; -fx-font-weight: bold; }
+.stat-value { -fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold; }
+.stat-subtitle { -fx-text-fill: rgba(255,255,255,0.9); -fx-font-size: 13px; }
+
+/* --- TABELAS E LISTAS --- */
+.section-header {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.custom-scroll { -fx-background-color: transparent; -fx-background: transparent; }
+.custom-scroll .viewport { -fx-background-color: transparent; }
+
+.order-row {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 15 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 10, 0, 0, 2);
+    -fx-cursor: hand;
+}
+.order-row:hover {
+    -fx-background-color: #ffffff;
+    -fx-translate-y: -2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 15, 0, 0, 5);
+}
+
+.row-title { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #2d3436; }
+.row-subtitle { -fx-font-size: 12px; -fx-text-fill: #636e72; }
+.row-price { -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2d3436; }
+
+/* Badges */
+.table-badge { -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 11px; -fx-padding: 5 12; -fx-background-radius: 6; }
+.badge-purple { -fx-background-color: #6C63FF; }
+.badge-blue   { -fx-background-color: #0984e3; }
+.badge-gray   { -fx-background-color: #b2bec3; }
+
+.status-pill { -fx-padding: 6 15; -fx-background-radius: 20; -fx-font-weight: bold; -fx-font-size: 11px; }
+.status-warning { -fx-background-color: #fff3cd; -fx-text-fill: #856404; }
+.status-success { -fx-background-color: #d1e7dd; -fx-text-fill: #0f5132; }
+.status-done { -fx-background-color: #e2e3e5; -fx-text-fill: #41464b; }
+
+/* --- FORMULÁRIOS (CADASTROS) --- */
+.content-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 20, 0, 0, 5);
+    -fx-padding: 20;
+}
+
+.input-label {
+    -fx-text-fill: #636e72;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+/* Campos de Texto Modernos */
+.input-field, .text-area, .combo-box {
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: #E9ECEF;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+    -fx-font-size: 13px;
+}
+
+.input-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-background-color: white;
+    -fx-border-color: #6C63FF; /* Roxo Neon ao focar */
+    -fx-effect: dropshadow(three-pass-box, rgba(108, 99, 255, 0.2), 5, 0, 0, 0);
+}
+
+.header-back-btn {
+    -fx-background-color: white;
+    -fx-background-radius: 50;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+.header-back-btn:hover { -fx-scale-x: 1.1; -fx-scale-y: 1.1; }
+
+.title-large {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3436;
+}

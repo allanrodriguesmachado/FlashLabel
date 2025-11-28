@@ -11,20 +11,16 @@
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 
-<!-- Usamos StackPane como raiz para permitir um fundo total e o card centralizado -->
-<StackPane fx:id="rootPane" prefHeight="450.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.manager.pdv.controller.auth.AuthController">
+<StackPane prefHeight="450.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.manager.pdv.controller.auth.AuthController">
 
-    <!-- Fundo com Gradiente (Definido no CSS) -->
     <VBox styleClass="background-layer" />
 
-    <!-- O "Cartão" de Login Centralizado -->
     <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="350.0" spacing="25.0" styleClass="login-card">
 
         <padding>
             <Insets bottom="40.0" left="35.0" right="35.0" top="40.0" />
         </padding>
 
-        <!-- Cabeçalho -->
         <VBox alignment="CENTER" spacing="5.0">
             <Label styleClass="title-label" text="Bem-vindo">
                 <font>
@@ -34,29 +30,22 @@
             <Label styleClass="subtitle-label" text="Acesse o PDV Manager" />
         </VBox>
 
-        <!-- Container do CPF com Ícone -->
         <VBox spacing="5.0">
             <Label styleClass="input-label" text="CPF DO OPERADOR" />
             <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-container">
-                <!-- Ícone de Usuário (SVG) -->
                 <SVGPath content="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" scaleX="1.2" scaleY="1.2" styleClass="input-icon" />
                 <TextField fx:id="document" promptText="000.000.000-00" HBox.hgrow="ALWAYS" />
             </HBox>
         </VBox>
 
-        <!-- Container da Senha com Ícone -->
         <VBox spacing="5.0">
             <Label styleClass="input-label" text="SENHA DE ACESSO" />
             <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-container">
-                <!-- Ícone de Cadeado (SVG) -->
                 <SVGPath content="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" scaleX="1.1" scaleY="1.1" styleClass="input-icon" />
-                <!-- Alterado para PasswordField por segurança -->
                 <PasswordField fx:id="password" promptText="••••••" HBox.hgrow="ALWAYS" />
             </HBox>
         </VBox>
 
-        <!-- Botão de Ação -->
         <Button maxWidth="1.7976931348623157E308" onAction="#loginAction" styleClass="login-button" text="ENTRAR NO SISTEMA" />
-
     </VBox>
 </StackPane>
