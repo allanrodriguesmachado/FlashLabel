@@ -1,9 +1,9 @@
-package br.com.bank.util;
+package br.com.manager.pdv.util;
 
 import java.io.IOException;
 import java.util.Objects;
 
-import br.com.bank.Main;
+import br.com.manager.pdv.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

@@ -1,4 +1,4 @@
-package br.com.bank.util;
+package br.com.manager.pdv.util;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;

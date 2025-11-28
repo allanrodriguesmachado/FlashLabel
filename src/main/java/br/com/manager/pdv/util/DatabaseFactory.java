@@ -1,6 +1,6 @@
-package br.com.bank.util;
+package br.com.manager.pdv.util;
 
-import br.com.bank.config.AppConfig;
+import br.com.manager.pdv.config.AppConfig;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

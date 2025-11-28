@@ -1,9 +1,11 @@
-package br.com.bank.controller.auth;
+package br.com.manager.pdv.controller.auth;
 
 import java.io.IOException;
 
-import br.com.bank.model.AuthModel;
-import br.com.bank.util.*;
+import br.com.manager.pdv.model.AuthModel;
+import br.com.manager.pdv.util.*;
+import br.com.manager.pdv.util.AlertUtil;
+import br.com.manager.pdv.util.ViewLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;

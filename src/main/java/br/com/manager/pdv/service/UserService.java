@@ -1,7 +1,7 @@
-package br.com.bank.service;
+package br.com.manager.pdv.service;
 
-import br.com.bank.dao.UserDao;
-import br.com.bank.model.entity.User;
+import br.com.manager.pdv.dao.UserDao;
+import br.com.manager.pdv.model.entity.User;
 
 import java.sql.SQLException;
 

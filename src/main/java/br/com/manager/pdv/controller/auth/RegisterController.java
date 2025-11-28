@@ -1,7 +1,7 @@
-package br.com.bank.controller.auth;
+package br.com.manager.pdv.controller.auth;
 
-import br.com.bank.service.UserService;
-import br.com.bank.util.AlertUtil;
+import br.com.manager.pdv.service.UserService;
+import br.com.manager.pdv.util.AlertUtil;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;

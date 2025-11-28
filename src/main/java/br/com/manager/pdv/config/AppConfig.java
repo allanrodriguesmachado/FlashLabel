@@ -1,4 +1,4 @@
-package br.com.bank.config;
+package br.com.manager.pdv.config;
 
 import java.io.IOException;
 import java.io.InputStream;

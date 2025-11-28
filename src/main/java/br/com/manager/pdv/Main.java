@@ -1,6 +1,6 @@
-package br.com.bank;
+package br.com.manager.pdv;
 
-import br.com.bank.util.ViewLoader;
+import br.com.manager.pdv.util.ViewLoader;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

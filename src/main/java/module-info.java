@@ -1,4 +1,4 @@
-module br.com.bank {
+module br.com.manager.pdv {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
@@ -6,10 +6,10 @@ module br.com.bank {
 
     requires static lombok;
 
-    opens br.com.bank to javafx.fxml;
-    opens br.com.bank.controller.auth to javafx.fxml;
-    opens br.com.bank.util to javafx.fxml;
+    opens br.com.manager.pdv to javafx.fxml;
+    opens br.com.manager.pdv.controller.auth to javafx.fxml;
+    opens br.com.manager.pdv.util to javafx.fxml;
 
 
-    exports br.com.bank;
+    exports br.com.manager.pdv;
 }
