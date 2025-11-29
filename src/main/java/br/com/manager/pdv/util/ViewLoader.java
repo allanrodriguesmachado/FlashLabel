@@ -6,11 +6,9 @@ import java.util.Objects;
 import br.com.manager.pdv.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.paint.Color;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import javafx.scene.*;
+import javafx.stage.*;
 
 public class ViewLoader {
     private ViewLoader() {

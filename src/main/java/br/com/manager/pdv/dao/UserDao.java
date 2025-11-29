@@ -4,10 +4,7 @@ import br.com.manager.pdv.model.entity.Auth;
 import br.com.manager.pdv.model.entity.User;
 import br.com.manager.pdv.util.DatabaseFactory;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.sql.*;
-import java.util.Arrays;
 
 public class UserDao {
     public void create(User user) throws SQLException {

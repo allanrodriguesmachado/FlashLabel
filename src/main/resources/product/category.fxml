@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox spacing="15.0" style="-fx-background-color: transparent;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.manager.pdv.controller.product.CategoryController">
+
+    <VBox spacing="15.0" styleClass="content-card" VBox.vgrow="ALWAYS" prefWidth="500" prefHeight="500">
+
+        <HBox alignment="CENTER_LEFT">
+            <VBox>
+                <Label styleClass="title-medium" text="Gerenciar Categorias"/>
+                <Label styleClass="row-subtitle" text="Adicione ou remova categorias do sistema"/>
+            </VBox>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="closeModal" onAction="#handleCloseModal" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <SVGPath content="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#999"/>
+                </graphic>
+            </Button>
+        </HBox>
+
+        <VBox spacing="5" style="-fx-background-color: #F8F9FA; -fx-background-radius: 8; -fx-padding: 10;">
+            <Label text="NOVA CATEGORIA" styleClass="input-label"/>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="newCategory" promptText="Ex: Bebidas, Lanches..." styleClass="input-field" HBox.hgrow="ALWAYS"/>
+
+                <Button onAction="#handleCleanInput" text="LIMPAR" styleClass="btn-secondary"/>
+
+                <Button onAction="#handleSaveAction" styleClass="btn-primary-action" text="ADICIONAR">
+                    <graphic>
+                        <SVGPath content="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="white" scaleX="0.8" scaleY="0.8"/>
+                    </graphic>
+                </Button>
+            </HBox>
+        </VBox>
+
+
+        <TableView VBox.vgrow="ALWAYS" styleClass="custom-table">
+            <columns>
+                <TableColumn  text="ID" prefWidth="60" style="-fx-alignment: CENTER;"/>
+                <TableColumn  text="NOME DA CATEGORIA" prefWidth="300"/>
+            </columns>
+            <placeholder>
+                <Label text="Nenhuma categoria cadastrada" textFill="#999"/>
+            </placeholder>
+        </TableView>
+
+
+    </VBox>
+</VBox>

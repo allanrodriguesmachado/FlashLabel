@@ -11,6 +11,7 @@ module br.com.manager.pdv {
     opens br.com.manager.pdv to javafx.fxml;
     opens br.com.manager.pdv.controller.auth to javafx.fxml;
     opens br.com.manager.pdv.controller.product to javafx.fxml;
+    opens br.com.manager.pdv.controller to javafx.fxml;
     opens br.com.manager.pdv.util to javafx.fxml;
 
 

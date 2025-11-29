@@ -23,28 +23,6 @@ public class AuthController {
     public void initialize() {
     }
 
-    @FXML private Button btnNovoProduto;
-
-    @FXML
-    public void abrirModalCadastro() {
-        try {
-            Stage dashboardStage = (Stage) this.btnNovoProduto.getScene().getWindow();
-
-            ViewLoader.loadNewWindowModal(
-                    "/fxml/modal_produto.fxml",
-                    "/styles/sistema.css",
-                    "Novo Produto",
-                    dashboardStage
-            );
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Dica: Mostre um alerta de erro aqui para facilitar o debug
-        }
-    }
-
-
     @FXML
     public void loginAction(ActionEvent event) throws  IOException {
         String doc = document.getText();
@@ -67,6 +45,6 @@ public class AuthController {
         }
 
         Stage stageClose = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        ViewLoader.loadNewWindow("/main-menu.fxml", "/style.css", "Bank App - Menu Principal", stageClose);
+        ViewLoader.loadNewWindow("/dashboard/index.fxml", "/style.css", "Bank App - Menu Principal", stageClose);
     }
 }

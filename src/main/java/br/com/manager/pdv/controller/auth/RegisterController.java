@@ -19,27 +19,6 @@ public class RegisterController {
     @FXML
     private TextField last_name;
 
-
-    @FXML private Button btnNovoProduto;
-
-    @FXML
-    public void abrirModalCadastro() {
-        try {
-            Stage dashboardStage = (Stage) this.btnNovoProduto.getScene().getWindow();
-
-            ViewLoader.loadNewWindowModal(
-                    "/modal_produto.fxml",
-                    "/sistema.css",
-                    "Novo Produto",
-                    dashboardStage
-            );
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     private final UserService userService;
 
     public RegisterController() {
