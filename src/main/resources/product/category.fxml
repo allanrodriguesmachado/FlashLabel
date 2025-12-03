@@ -38,7 +38,7 @@
                 <TextField fx:id="newCategory" promptText="Ex: Bebidas, Lanches..." styleClass="input-field"
                            HBox.hgrow="ALWAYS"/>
 
-                <Button onAction="#handleSaveAction" styleClass="btn-primary-action" text="ADICIONAR">
+                <Button onAction="#handleSaveAction" fx:id="btnAction" styleClass="btn-primary-action" text="ADICIONAR">
                     <graphic>
                         <SVGPath content="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="white" scaleX="0.8" scaleY="0.8"/>
                     </graphic>
@@ -60,6 +60,7 @@
                 <columns>
                     <TableColumn fx:id="colId" text="ID" style="-fx-alignment: CENTER;"/>
                     <TableColumn fx:id="colName" text="Nome da Categoria" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="colEdit" text="Editar" style="-fx-alignment: CENTER;" maxWidth="80" minWidth="80"/>
                     <TableColumn fx:id="colDelete" text="Excluir" style="-fx-alignment: CENTER;" maxWidth="80"
                                  minWidth="80"/>
                 </columns>
