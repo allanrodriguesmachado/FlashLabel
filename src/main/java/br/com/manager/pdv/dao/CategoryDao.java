@@ -36,10 +36,19 @@ public class CategoryDao {
     }
 
     public void delete(Integer id) throws SQLException {
-        try(Connection conn = DatabaseFactory.getConnection()) {
-            var stmt = conn.prepareStatement("UPDATE categories SET active = false WHERE id = ?");
+        try (Connection conn = DatabaseFactory.getConnection()) {
+            var stmt = conn.prepareStatement("UPDATE categories SET active = false, canceled_at = CURRENT_DATE WHERE id = ?");
 
             stmt.setInt(1, id);
+            stmt.executeUpdate();
+        }
+    }
+
+    public void update(Integer id, String name) throws SQLException {
+        try (Connection conn = DatabaseFactory.getConnection()) {
+            var stmt = conn.prepareStatement("UPDATE categories SET name = ? WHERE id = ?");
+            stmt.setString(1, name);
+            stmt.setInt(2, id);
             stmt.executeUpdate();
         }
     }

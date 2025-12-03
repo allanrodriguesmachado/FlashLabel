@@ -43,7 +43,8 @@ public class CategoryController {
 
     private Category categoryInEdition = null;
 
-    @FXML private Button btnAction;
+    @FXML
+    private Button btnAction;
 
     public void initialize() {
         handleListCategoriesAction();
@@ -62,8 +63,9 @@ public class CategoryController {
     }
 
     public void handleSaveAction() {
+        String categoryName = newCategory.getText();
+
         if (categoryInEdition == null) {
-            String categoryName = newCategory.getText();
             if (categoryName == null || categoryName.isBlank()) {
                 AlertUtil.showAlert(Alert.AlertType.ERROR, "Categoria inválida", "Preencha todos os campos");
                 return;
@@ -77,7 +79,22 @@ public class CategoryController {
             handleListCategoriesAction();
 
             newCategory.requestFocus();
+            return;
         }
+
+        CategoryService newService = new CategoryService();
+        newService.update(categoryInEdition.id(), categoryName);
+        handleListCategoriesAction();
+
+        resetForm();
+    }
+
+    private void resetForm() {
+        this.categoryInEdition = null;
+        newCategory.clear();
+
+        btnAction.setText("ADICIONAR");
+        btnAction.setStyle("");
     }
 
     private void handleListCategoriesAction() {

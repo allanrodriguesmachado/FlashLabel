@@ -37,4 +37,12 @@ public class CategoryService {
             throw new RuntimeException(e.getMessage());
         }
     }
+
+    public void update(Integer id, String name) {
+        try {
+            categoryDao.update(id, name);
+        } catch (SQLException e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
 }
