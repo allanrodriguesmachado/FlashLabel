@@ -30,7 +30,7 @@ public class ViewLoader {
         newStage.setTitle(title);
         newStage.setResizable(true);
         newStage.setScene(scene);
-        newStage.setFullScreen(true);
+//        newStage.setFullScreen(true);
 
         newStage.initStyle(StageStyle.TRANSPARENT);
         newStage.initModality(Modality.APPLICATION_MODAL);
